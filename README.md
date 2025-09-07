@@ -32,12 +32,11 @@ desc = "Show recently modified files"
 
 ## Configuration
 
-The time range is currently hardcoded to 5 days. To modify this:
+To modify the time range:
 
-1. Edit `main.lua`
-2. Find the line with `--changed-within`, `5d`
-3. Change `5d` to your preferred time range (e.g., `1d` for 1 day, `1w` for 1 week)
-4. Change the option of `fd` to show files and dirs. including hidden ones: `Command("fd"):arg {"-H", "--changed-within", "5d"}`
+1. Find the line with `--changed-within`, `5d` in `main.lua`
+2. Change `5d` to your preferred time range (e.g., `1d` for 1 day, `1w` for 1 week)
+3. Change the option of `fd` to show files and dirs. including hidden ones: `Command("fd"):arg {"-H", "--changed-within", "5d"}`
 
 ## Usage
 
