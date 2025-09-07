@@ -1,10 +1,6 @@
 # modif.yazi
 
-A Yazi plugin that displays recently modified files (within the last 5 days) in a virtual directory.
-
-## Description
-
-This plugin creates a virtual directory showing files that have been modified within the last 5 days. It uses `fd` to find these files and presents them in a new tab within Yazi.
+A Yazi plugin that displays recently modified files (within the last 5 days). 
 
 ## Requirements
 
