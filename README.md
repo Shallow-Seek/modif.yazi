@@ -41,8 +41,8 @@ To modify the time range:
 ## Usage
 
 1. In Yazi, press `b` followed by `m` (or your configured keybinding)
-2. A new tab will open showing files modified within the last 5 days
-3. Navigate the files as you would in any regular directory
+2. files modified within the last 5 days will be shown in the search pane.
+3. Navigate, operate, and preview the files as you would in any regular directory. And quit the view by press `esc`.
 
 ## License
 

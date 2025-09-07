@@ -4,7 +4,6 @@ local function entry()
 	local cmd = Command("fd"):arg {"--type", "f", "--changed-within", "5d"}
                              :cwd(tostring(cwd))
 	local output, err = cmd:output()
-    ya.emit("tab_create", {})
 	local id = ya.id("ft")
 	local vitual_dir = cwd:into_search("Recent 5d")
 	ya.emit("cd", { Url(vitual_dir) })
