@@ -26,17 +26,31 @@ ya pkg add Shallow-Seek/modif.yazi
 ```toml
 [[manager.prepend_keymap]]
 on = [ "b", "m" ]
-run = "plugin modif"
-desc = "Show recently modified files"
+run = "plugin modif 5d"
+desc = "Show files modified in the last 5 days"
 ```
 
 ## Configuration
 
-To modify the time range:
+You can configure the time range for recently modified files by passing an argument to the `plugin` command in your `keymap.toml`. This allows you to have multiple keybindings for different time ranges.
 
-1. Find the line with `--changed-within`, `5d` in `main.lua`
-2. Change `5d` to your preferred time range (e.g., `1d` for 1 day, `1w` for 1 week)
-3. Change the option of `fd` to show files and dirs. including hidden ones: `Command("fd"):arg {"-H", "--changed-within", "5d"}`
+For example:
+
+```toml
+[[manager.prepend_keymap]]
+on = [ "b", "m" ]
+run = "plugin modif 5d"
+desc = "Show files modified in the last 5 days"
+
+[[manager.prepend_keymap]]
+on = [ "b", "w" ]
+run = "plugin modif 1w"
+desc = "Show files modified in the last week"
+```
+
+The default time range is `5d` if no argument is provided. 
+
+The arg will be passed as `fd`'s `--changed-within` [option](https://man.archlinux.org/man/extra/fd/fd.1.en#changed-within). It can be specified using units like d (days), week, month, year.
 
 ## Usage
 
