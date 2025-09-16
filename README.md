@@ -21,7 +21,7 @@ or
 ya pkg add Shallow-Seek/modif.yazi
 ```
 
-2. Add the plugin to your Yazi configuration (`keymap.toml`):
+2. Add the plugin to your Yazi keymaps (`keymap.toml`):
 
 ```toml
 [[manager.prepend_keymap]]
@@ -37,11 +37,6 @@ You can configure the time range for recently modified files by passing an argum
 For example:
 
 ```toml
-[[manager.prepend_keymap]]
-on = [ "b", "m" ]
-run = "plugin modif 5d"
-desc = "Show files modified in the last 5 days"
-
 [[manager.prepend_keymap]]
 on = [ "b", "w" ]
 run = "plugin modif 1w"
