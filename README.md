@@ -18,7 +18,7 @@ git clone https://github.com/your-username/modif.yazi.git ~/.config/yazi/plugins
 or
 
 ```
-ya pkg add Shallow-Seek/modif.yazi
+ya pkg add Shallow-Seek/modif
 ```
 
 2. Add the plugin to your Yazi keymaps (`keymap.toml`):
