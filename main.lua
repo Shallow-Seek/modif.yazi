@@ -23,7 +23,7 @@ local function entry(_, job)
 	end
 
 	ya.emit("update_files", {op = fs.op("part", { id = id, url = Url(virtual_dir), files = files })})
-	ya.emit("update_files", {op = fs.op("done", { id = id, url = virtual_dir, cha = Cha { kind = 16 }})})
+	ya.emit("update_files", {op = fs.op("done", { id = id, url = virtual_dir, cha = Cha {mode = tonumber("100644", 8)} }) })
 end
 
 return { entry = entry }
